@@ -1,0 +1,27 @@
+{
+    "name": "hannesvdvreken/socketio",
+    "description": "Pushing Socket.io messages to Redis for socket.io's Redis socket manager.",
+    "authors": [
+        {
+            "name": "Hannes Van De Vreken",
+            "email": "vandevreken.hannes@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "hannesvdvreken/msgpack": "dev-master",
+        "predis/predis": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Socketio\\": "src/"
+        }
+    },
+    "suggest": {
+        "ext-msgpack": "Allows faster msgpack serialization and deserialization."
+    },
+    "scripts": {
+        "test": "echo 'No tests yet. Help me by writing some!';"
+    },
+    "minimum-stability": "stable"
+}
