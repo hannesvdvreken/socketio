@@ -75,6 +75,21 @@ These come pre-installed with composer if you require this package.
 $msgpack = new Socketio\Utils\Msgpack(new Msgpack\Encoder, new Msgpack\Decoder);
 ```
 
+## The Node.js process
+
+```js
+var app = require('express')();
+var socketio = require('socket.io');
+var adapter = require('socket.io-redis');
+var redis = require('redis');
+
+var server = app.listen(process.env.NODE_PORT || 9000);
+var sub = redis.createClient();
+
+io = socketio(server);
+io.adapter(adapter({subClient: sub}));
+```
+
 Right now, you're good to go!
 
 ## Contributing
