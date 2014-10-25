@@ -141,6 +141,9 @@ class Socketio implements Server
         return $this;
     }
 
+    /**
+     * @param string $namespace
+     */
     protected function setNamespace($namespace)
     {
         $this->namespace = '/' . ltrim($namespace, '/');
@@ -163,6 +166,9 @@ class Socketio implements Server
         return $options;
     }
 
+    /**
+     * @return null
+     */
     protected function reset()
     {
         $this->rooms = [];
