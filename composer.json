@@ -7,6 +7,7 @@
             "email": "vandevreken.hannes@gmail.com"
         }
     ],
+    "license": "MIT",
     "require": {
         "php": ">=5.4.0",
         "hannesvdvreken/msgpack": "dev-master",
