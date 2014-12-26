@@ -156,12 +156,8 @@ class Socketio implements Server
     {
         $options = [];
 
-        //if ($this->rooms) {
-            $options['rooms'] = $this->rooms ?: null;
-        //}
-        //if ($this->flags) {
-            $options['flags'] = $this->flags ?: null;
-        //}
+        $options['rooms'] = $this->rooms ?: null;
+        $options['flags'] = $this->flags ?: null;
 
         return $options;
     }
